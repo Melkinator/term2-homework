@@ -2,7 +2,7 @@
 using namespace std;
 
 void del(int arr[], int *size, int del) {
-    if (del<*size-1&&del>=0) {
+    if (del<=*size-1&&del>=0) {
         for (int i=0;i<*size;i++) {
             if (i==del) {
                 for (int j=i;j<*size;j++) {
@@ -18,7 +18,7 @@ void del(int arr[], int *size, int del) {
 
 void add(int arr[], int *size, int pos, int add) {
     int temp;
-    if (pos<*size-1&&pos>=0) {
+    if (pos<=*size-1&&pos>=0) {
         (*size)++;
         for (int i=*size-1;i>pos;i--) {
             temp = arr[i];
@@ -35,7 +35,7 @@ int main() {
     int arr[] = {1,2,3,4,5};
     int size = sizeof(arr)/sizeof(arr[0]);
     
-    del(arr, &size, -1);
+    del(arr, &size, 4);
 
     for (int i=0;i<size;i++) {
         cout << arr[i] << " ";
