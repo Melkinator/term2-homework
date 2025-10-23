@@ -1,0 +1,11 @@
+/* TODO */
+button {
+    background: lightblue;
+    border-radius: 30px;
+    border-color: blue;
+}
+
+button:hover {
+    background: blue;
+    border-color: darkblue;
+}
