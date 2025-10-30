@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            height: 100vh;
+            background: lightblue;
+        }
+        .main {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            height: 100vh;
+            padding: 10px;
+        }
+        header {
+            border: 0.5rem;
+            background: #1e90ff;
+            height: 80px;
+            border-radius: 8px;
+            display: flex;
+            flex-shrink: 0;
+        }
+        .main-sections {
+            display: flex;
+            gap: 1rem;
+            flex: 1;
+        }
+        section {
+            display: flex;
+            gap: 1rem;
+            flex: 1;
+        }
+        .left-section {
+            background: #3cb371;
+            display: flex;
+            flex-wrap: wrap;
+            flex: 3;
+            gap: 1rem;
+            align-content: flex-start;
+        }
+        .right-section {
+            background: #ff6347;
+            flex: 1;
+            border-radius: 8px;
+        }
+        .item {
+            background: #2f8d59;
+            display: flex;
+            border-radius: 8px;
+            margin: 1rem;
+            min-height: 80px;
+            flex: 1;
+        }
+        footer {
+            background: #4169e1;
+            height: 60px;
+            border-radius: 8px;
+            flex-shrink: 0;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <header></header>
+        <div class="main-sections">
+            <section class="left-section">
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </section>
+            <section class="right-section"></section>
+        </div>
+        <footer></footer> 
+    </div>
+</body>
+</html>
