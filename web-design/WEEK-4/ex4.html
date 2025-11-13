@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dashboard {
+            display: grid;
+            grid-template-areas: 
+                "sidebar header header"
+                "sidebar main widgets"
+                "sidebar footer footer";
+            grid-template-columns: 250px 1fr 300px;
+            grid-template-rows: 80px 1fr 100px;
+            min-height: 100vh;
+            gap: 20px;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .header {
+            grid-area: header;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .main {
+            grid-area: main;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .widgets {
+            grid-area: widgets;
+            display: grid;
+            gap: 15px;
+        }
+
+        .widget {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .footer {
+            grid-area: footer;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .media {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .dashboard {
+                grid-template-areas: 
+                    "header"
+                    "main"
+                    "widgets"
+                    "sidebar"
+                    "footer";
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+            }
+            
+            .sidebar {
+                order: 4;
+            }
+
+            .media {
+                grid-template-columns: 1fr; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="sidebar">
+            <h3>Menu</h3>
+            <ul>
+                <li>Home</li>
+                <li>Analytics</li>
+                <li>Reports</li>
+                <li>Settings</li>
+                <li>save me from this</li>
+            </ul>
+        </div>
+        <div class="header">
+            <h1>why</h1>
+        </div>
+        <div class="main">
+            <h2>peak</h2>
+            <p>I was born at a very young age.</p>
+            <div class="media">
+                <!-- <img src="https://media1.tenor.com/m/j8Y254VBBU0AAAAd/satono-diamond-kitasan-black.gif">
+                <img src="https://media1.tenor.com/m/kFXyqu3yHmgAAAAd/satono-diamond-uma-musume.gif">
+                <img src="https://images-ext-1.discordapp.net/external/MGIhVOst-5XDwJp7gdRp7khdYn4atvWoJWr2-HnngLA/https/gif.fxtwitter.com/tweet_video/G3rhnFvW4AAVBuY.gif?width=448&height=351"> -->
+                <img src="https://media1.tenor.com/m/oExlwt8_0XwAAAAd/coding-what.gif">
+                <img src="https://media1.tenor.com/m/dofkOmsOZmwAAAAd/sliped-banana.gif">
+            </div>
+        </div>
+        <div class="widgets">
+            <div class="widget">the</div>
+            <div class="widget">cuh</div>
+            <div class="widget">erm</div>
+        </div>
+        <div class="footer">
+            <p>feet</p>
+        </div>
+    </div>
+</body>
+</html>
