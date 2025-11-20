@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .small, .big {
+            display: none;
+        }
+        .content {
+            text-align: center;
+        }
+        @media only screen and (max-width: 600px) {
+            .small {
+                display: inline;
+                color: black;
+                font-weight: bold;
+                background-color: red;
+            }
+        }
+        @media only screen and (min-width: 601px) {
+            .big {
+                display: inline;
+                color: black;
+                font-weight: bold;
+                background-color: green;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <span class="small">I'm small</span>
+            <span class="big">I'm big</span>
+        </div>
+    </div>
+</body>
+</html>
