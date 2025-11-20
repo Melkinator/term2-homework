@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label {
+            display: block; 
+            text-align: left;
+            color: #04AA6D;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+        }
+        .box  {
+            display: grid;
+            place-content: center;
+            text-align: center;
+            border-radius: 8px;
+            background-color: white;
+            width: fit-content;
+            margin: 8px 0;
+            border: 2px solid black;
+            overflow: hidden;
+        }
+        .middle {
+            padding: 20px;
+        }
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .header {
+            background-color: lightgray;
+            padding: 15px 0;
+            width: 100%;
+        }
+        input {
+            width: 100%;
+        }
+        p {
+            font-size: 20px;
+        }
+        .email-input {
+            grid-column: span 2;
+        }
+        input[type=checkbox] {
+            width: 20px;
+        }
+        .checkbox-input {
+            display: flex;
+            flex-wrap: calc();
+            font-size: auto;
+        }
+        select {
+            width: 100%;
+        }
+        input[type=textarea] {
+            height: 150px;
+        }
+        .footer {
+            grid-column: span 2;
+            display: flex;
+            grid-template-columns: 1fr 1fr;
+            background-color: lightgray;
+            justify-content: flex-end;
+            padding: 15px;
+        }
+        .submit-button {
+            grid-column: 2/2;
+            background-color: lightgray;
+            align-self: right;
+        }
+        input[type=submit] {
+            display: flex;
+            cursor: pointer;
+            color: white;
+            justify-content: center;
+            width: fit-content;
+            font-size: large;
+            border-radius: 8px;
+            border: 8px #04AA6D;
+            margin: 4px 2px;
+            padding: 16px 32px;
+            background-color: #04AA6D;
+        }
+        .bio-form {
+            grid-column: span 2;
+        }
+        #male {
+            color: black;
+        }
+        #female {
+            color: black;
+        }
+        #hobbies {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="header">
+            <p>Create Account</p>
+        </div>
+        <div class="middle">
+            <form>
+                <div class="input-form">
+                    <label for="fname">First name *</label>
+                    <input type="text" id="fname" name="fname" placeholder="Enter your first name">
+                </div>
+                <div class="input-form">
+                    <label for="lname">Last name</label>
+                    <input type="text" id="lname" name="lname" placeholder="Enter your last name">
+                </div>
+                <div class="email-input">
+                    <label for="mail">Email</label>
+                    <input type="email" id="mail" name="mail" placeholder="Enter your email">
+                </div>
+                <div class="input-form">
+                    <label for="pass">Password *</label>
+                    <input type="password" id="pass" name="pass" placeholder="Enter your password">
+                </div>
+                <div class="input-form">
+                    <label for="pass">Confirm password *</label>
+                    <input type="password" id="pass" name="pass" placeholder="Enter your password again">
+                </div>
+                <div class="input-form">
+                    <label for="gender">Gender</label>
+                    <div class="checkbox-input">
+                        <input type="checkbox" id="male" name="male" value="male">
+                    <label for="male" id="male">Male</label>
+                    <input type="checkbox" id="female" name="female" value="female">
+                    <label for="female" id="female">Female</label>
+                    </div>
+                </div>
+                <div class="input-form">
+                    <label for="hobbies">Hobbies</label>
+                    <div class="checkbox-input">
+                        <input type="checkbox" id="hobbies" name="hobbies">
+                        <label for="hobbies" id="hobbies">Music</label>
+                        <input type="checkbox" id="hobbies" name="hobbies">
+                        <label for="hobbies" id="hobbies">Sports</label>
+                        <input type="checkbox" id="hobbies" name="hobbies">
+                        <label for="hobbies" id="hobbies">Travel</label>
+                        <input type="checkbox" id="hobbies" name="hobbies">
+                        <label for="hobbies" id="hobbies">Movies</label>
+                    </div>
+                </div>
+                <div class="input-form">
+                    <label for="income">Source of income</label>
+                    <select id="income" name="income">
+                        <option value="employed">Employed</option>
+                        <option vlaue="unemployed">Unemployed</option>
+                    </select>
+                </div>
+                <div class="input-form">
+                    <label for="income">Income</label>
+                    <input type="range" min="0" max="20000">
+                </div>
+                <div class="input-form">
+                    <label for="file">Upload profile picture</label>
+                    <input type="file" accept=".jpg,.png">
+                </div>
+                <div class="input-form">
+                    <label for="age">Age</label>
+                    <input type="text" id="age" name="age" value="18">
+                </div>
+                <div class="bio-form">
+                    <label for="bio">Bio</label>
+                    <input type="textarea" rows="10" cols="10">
+                </div>
+            </form>
+        </div>
+        <form>
+            <div class="footer">
+               <div class="submit-button">
+                    <input type="submit" value="Create">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
