@@ -1,17 +1,27 @@
 #include <iostream>
 #include <vector>
+#include <random>
 #include <string>
 using namespace std;
 
 class Node {
     public:
         int data;
-        string name;        
+        string name;
+        int score;        
         Node *left;
         Node *right;
 
-        Node(int x, string d): data(x), name(d), left(nullptr), right(nullptr) {}
+        Node(int x, string d, int y): data(x), name(d), score(y), left(nullptr), right(nullptr) {}
 };
+    
+random_device rd;
+mt19937 gen(rd());
+uniform_int_distribution<> distrib(1, 100);
+
+int getScore() {
+    return distrib(gen);
+}
 
 bool search(Node *root, int num) {
     if (root==nullptr) return false;
@@ -24,15 +34,15 @@ bool search(Node *root, int num) {
     }
 }
 
-Node *insert(Node *root, int num, string name) {
-    if (root==nullptr) return new Node(num, name);
+Node *insert(Node *root, int num, string name, int score) {
+    if (root==nullptr) return new Node(num, name, score);
 
     if (search(root, num)) throw runtime_error("you already have the same number");
 
     if (num<root->data) {
-        root->left = insert(root->left, num, name);
+        root->left = insert(root->left, num, name, score);
     } else {
-        root->right = insert(root->right, num, name);
+        root->right = insert(root->right, num, name, score);
     }
     return root;
 }
@@ -79,8 +89,8 @@ void printBracket(vector<Node *>players) {
             if (i+1<players.size()) {
                 Node *a = players[i];
                 Node *b = players[i+1];
-                cout << " Match " << (i/2+1) << ": " << a->name << "(seed " << a->data << ") vs " << b->name << " (seed " << b->data << ")\n";
-                Node *winner = (a->data >= b->data) ? a : b;
+                cout << " Match " << (i/2+1) << ": " << a->name << " (seed " << a->data << ") Score: " << a->score << " vs " << b->name << " (seed " << b->data << ") Score: " << b->score << "\n";
+                Node *winner = (a->score >= b->score) ? a : b;
                 next.push_back(winner);
             } else {
                 Node *a = players[i];
@@ -97,11 +107,11 @@ void printBracket(vector<Node *>players) {
 
 int main() {
     Node *bst = nullptr;
-    bst = insert(bst, 21, "brother");
-    bst = insert(bst, 24, "cuh");
-    bst = insert(bst, 23, "ranald");
-    bst = insert(bst, 22, "john");
-    bst = insert(bst, 25, "john fortnite");
+    bst = insert(bst, 21, "brother", getScore());
+    bst = insert(bst, 24, "cuh", getScore());
+    bst = insert(bst, 23, "ranald", getScore());
+    bst = insert(bst, 22, "john", getScore());
+    bst = insert(bst, 25, "john fortnite", getScore());
 
     cout << "In-order print:\n";
     printInOrder(bst);
