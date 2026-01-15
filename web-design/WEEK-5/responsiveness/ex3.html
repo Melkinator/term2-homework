@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 400px;
+        }
+        .flex-header, .flex-footer {
+            background-color: gray;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .flex-main {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+        }
+        section {
+            background-color: lightgray;
+            padding: 20px;
+            width: 80%;
+        }
+        aside {
+            background-color: lightgray;
+            width: 80%;
+            padding: 20px;
+        }
+        @media (min-width: 600px) {
+            .container {
+                min-height: 500px;
+            }
+            .flex-main {
+                flex-direction: row;
+            }
+            .flex-footer, .flex-header {
+                padding: 25px;
+                font-size: 1.1rem;
+            }
+        }
+        @media (min-width: 900px) {
+            .container {
+                min-height: 600px;
+            }
+            .flex-footer, .flex-header {
+                padding: 30px;
+                font-size: 1.2rem;
+            }
+            main {
+                flex: 3;
+            }
+            aside {
+                width: 250px;
+            }
+        }
+        @media (max-width: 599px) {
+            .flex-main {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="flex-header">Responsive Header</header>
+        <main class="flex-main">
+            <section>Main Content</section>
+            <aside>Sidebar</aside>
+        </main>
+        <footer class="flex-footer">Footer</footer>
+    </div>
+</body>
+</html>

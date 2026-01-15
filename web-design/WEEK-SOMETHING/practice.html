@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>StudyHub — Learning Resources</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        :root {
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --muted: #64748b;
+            --accent: #2563eb;
+            --radius: 12px;
+            --max-width: 1100px;
+        }
+    </style>
+</head>
+
+<body class="h-full font-sans bg-(--bg) text-black leading-[1.45] p-[24px] flex justify-center items-start">
+    <div class="w-full max-w-(--max-width)" role="main">
+        <!-- Header -->
+        <header class="flex justify-between items-center gap-[16px] mb-[24px]">
+            <div class="flex items-center gap-[12px]">
+                <div class="w-[48px] h-[48px] rounded-[10px] bg-linear-[135deg,#4f46e5,#06b6d4] flex items-center justify-center text-white font-[700] shadow-[0_6px_18px_rgba(15,23,42,0.08)]">SH</div>
+                <div>
+                    <div class="font-[800]">StudyHub</div>
+                    <div class="text-[13px] text-(--muted)">Learn together • Build faster</div>
+                </div>
+            </div>
+
+            <nav class="flex gap-[18px] items-center text-(--muted) no-underline font-[600] p-[8px_12px] rounded-[8px]" aria-label="Primary">
+                <a class="font-[600] p-[8px_12px] rounded-[8px]" href="#courses">Courses</a>
+                <a class="font-[600] p-[8px_12px] rounded-[8px]" href="#resources">Resources</a>
+                <a class="font-[600] p-[8px_12px] rounded-[8px]" href="#community">Community</a>
+                <a href="#signup" class="font-[600] p-[8px_12px] rounded-[8px] bg-(--accent) text-white">Get Started</a>
+            </nav>
+        </header>
+
+        <!-- Hero -->
+        <section class="grid grid-cols-[1fr_420px] gap-[24px] items-center mb-[28px]" aria-labelledby="hero-heading">
+            <div class="bg-linear-[180deg,rgba(255,255,255,0.6),rgba(255,255,255,0.9)] p-[28px] rounded-(--radius) shadow-[0_6px_20px_rgba(2,6,23,0.06)]">
+                <h1 class="mb-[12px] text-[28px]" id="hero-heading">Your weekly learning playground</h1>
+                <p class="mb-[18px] text-(--muted)">Curated bite-sized courses, hands-on projects, and community challenges to keep you
+                    learning consistently.</p>
+                <div class="flex gap-[12px]">
+                    <button class="border-[0] p-[12px_16px] rounded-[10px] cursor-pointer font-[700] bg-(--accent) text-white">Explore Courses</button>
+                    <button class="border-[0] p-[12px_16px] rounded-[10px] cursor-pointer font-[700] bg-transparent border-[2px] border-solid border-[#e6eef9] text-(--accent)">Join Community</button>
+                </div>
+
+                <hr class="m-[18px_0] border-none [border-top:1px_solid_#eef2ff]">
+
+                <div class="flex gap-[12px] flex-wrap">
+                    <div class="min-w-[160px]">
+                        <div class="text-[13px] text-(--muted)">Next live workshop</div>
+                        <div class="font-[700]">Stateful APIs • Dec 15</div>
+                    </div>
+                    <div class="min-w-[160px]">
+                        <div class="text-[13px] text-(--muted)">Active learners</div>
+                        <div class="font-[700]">3,412</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Signup card -->
+            <aside class="gap-[24px] items-center mb-[28px] bg-linear-[180deg,rgba(255,255,255,0.6),rgba(255,255,255,0.9)] p-[28px] rounded-(--radius) shadow-[0_6px_20px_rgba(2,6,23,0.06)]" aria-labelledby="signup-title">
+                <h2 id="signup-title" class="text-[18px] mb-[8px] font-bold">Start your free plan</h2>
+                <p class="text-(--muted) mb-[12px]">No credit card — upgrade anytime.</p>
+                <form id="signup" class="flex flex-col gap-[10px]">
+                    <input type="text" placeholder="Full name"
+                        class="p-[10px] rounded-[8px] [border:1px_solid_#e6eef9]"/>
+                    <input type="email" placeholder="Email address"
+                        class="p-[10px] rounded-[8px] [border:1px_solid_#e6eef9]"/>
+                    <button type="submit" class="border-[0] p-[12px_16px] rounded-[10px] cursor-pointer font-[700] bg-(--accent) text-white">Create account</button>
+                </form>
+            </aside>
+        </section>
+
+        <!-- Features -->
+        <section class="grid grid-cols-[repeat(3,1fr)] gap-[16px] mb-[28px]" aria-label="features">
+            <div class="bg-(--card) p-[18px] rounded-[12px] shadow-[0_6px_18px_rgba(2,6,23,0.04)] flex gap-[12px] items-start">
+                <div
+                    class="w-[46px] h-[46px] rounded-[10px] bg-[#eef2ff] flex items-center justify-center font-[700]">
+                    PG</div>
+                <div>
+                    <h3 class="mb-[6px] text-[16px] font-bold">Project Guided</h3>
+                    <p>Short projects with guided steps and solution walkthroughs.</p>
+                </div>
+            </div>
+
+            <div class="bg-(--card) p-[18px] rounded-[12px] shadow-[0_6px_18px_rgba(2,6,23,0.04)] flex gap-[12px] items-start">
+                <div
+                    class="w-[46px] h-[46px] rounded-[10px] bg-[#fff7ed] flex items-center justify-center font-[700]">
+                    LR</div>
+                <div>
+                    <h3 class="mb-[6px] text-[16px] font-bold">Learning Roadmaps</h3>
+                    <p>Structured paths from beginner to job-ready levels.</p>
+                </div>
+            </div>
+
+            <div class="bg-(--card) p-[18px] rounded-[12px] shadow-[0_6px_18px_rgba(2,6,23,0.04)] flex gap-[12px] items-start">
+                <div
+                    class="w-[46px] h-[46px] rounded-[10px] bg-[#ecfccb] flex items-center justify-center font-[700]">
+                    CM</div>
+                <div>
+                    <h3 class="mb-[6px] text-[16px] font-bold">Community Mentors</h3>
+                    <p>Mentor hours and peer feedback to accelerate growth.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources grid -->
+        <section id="resources" class="grid grid-cols-[repeat(4,1fr)] gap-[14px] mb-[28px]" aria-label="resources">
+            <article class="bg-(--card) p-[12px] rounded-[10px] flex flex-col gap-[8px]">
+                <img class="w-full h-[110px] object-cover rounded-[8px]" src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=abcd"
+                    alt="notebook and coffee">
+                <h4 class="text-[15px] font-bold">How to build a daily coding habit</h4>
+                <p class="text-(--muted) text-[13px]">10 min read • Beginner</p>
+            </article>
+
+            <article class="bg-(--card) p-[12px] rounded-[10px] flex flex-col gap-[8px]">
+                <img class="w-full h-[110px] object-cover rounded-[8px]" src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=efgh"
+                    alt="laptop">
+                <h4 class="text-[15px] font-bold">Deploy your first Node.js app</h4>
+                <p class="text-(--muted) text-[13px]">30 min guide • Intermediate</p>
+            </article>
+
+            <article class="bg-(--card) p-[12px] rounded-[10px] flex flex-col gap-[8px]">
+                <img class="w-full h-[110px] object-cover rounded-[8px]" src="https://images.unsplash.com/photo-1515165562835-c6c8f2d0d6f9?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=ijkl"
+                    alt="whiteboard diagram">
+                <h4 class="text-[15px] font-bold">System design crash course</h4>
+                <p class="text-(--muted) text-[13px]">45 min • Intermediate</p>
+            </article>
+
+            <article class="bg-(--card) p-[12px] rounded-[10px] flex flex-col gap-[8px]">
+                <img class="w-full h-[110px] object-cover rounded-[8px]" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=mnop"
+                    alt="team">
+                <h4 class="text-[15px] font-bold">How to work in open source</h4>
+                <p class="text-(--muted) text-[13px]">25 min • All levels</p>
+            </article>
+        </section>
+
+        <!-- Two-column layout with sidebar -->
+        <section class="grid grid-cols-[2fr_1fr] gap-[20px] mb-[28px]" aria-label="dashboard">
+            <div>
+                <div class="mb-[14px]">
+                    <h3 class="mb-[10px] font-bold text-[1.17em]">Your active courses</h3>
+                    <div class="flex flex-col gap-[12px]">
+                        <div class="flex justify-between items-center gap-[12px]">
+                            <div>
+                                <div class="font-[700]">Fullstack Basics</div>
+                                <div class="text-[13px] text-(--muted)">Module 3 of 8</div>
+                            </div>
+                            <div class="min-w-[120px]">
+                                <div class="text-[13px] text-(--muted)">Progress</div>
+                                <div
+                                    class="h-[8px] bg-[#eef2ff] rounded-[8px] mt-[6px] overflow-hidden">
+                                    <div
+                                        class="w-[78%] h-full bg-linear-[90deg,#7c3aed,#06b6d4]">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-between items-center gap-[12px]">
+                            <div>
+                                <div class="font-[700]">Intro to Databases</div>
+                                <div class="text-[13px] text-(--muted)">Module 1 of 5</div>
+                            </div>
+                            <div class="min-w-[120px]">
+                                <div class="text-[13px] text-(--muted)">Progress</div>
+                                <div
+                                    class="h-[8px] bg-[#eef2ff] rounded-[8px] mt-[6px] overflow-hidden">
+                                    <div
+                                        class="w-[36%] h-full bg-linear-[90deg,#34d399,#06b6d4]">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-[14px]">
+                    <h3 class="mb[10px]">Community Challenges</h3>
+                    <ul class="list-none grid gap-[10px]">
+                        <li
+                            class="bg-[#fff] p-[10px] rounded-[8px] flex justify-between items-center">
+                            <div>
+                                <div class="font-[700]">30-day JS challenge</div>
+                                <div class="text-[13px] text-(--muted)">Day 12 • 120 people active</div>
+                            </div>
+                            <button class="border-[0] p-[12px_16px] rounded-[10px] cursor-pointer font-[700] bg-transparent border-[2px] border-solid border-[#e6eef9] text-(--accent)">Join</button>
+                        </li>
+                        <li
+                            class="bg-[#fff] p-[10px] rounded-[8px] flex justify-between items-center">
+                            <div>
+                                <div class="font-[700]">Weekly Algo Sprint</div>
+                                <div class="text-[13px] text-(--muted)">Sat • 10:00 AM</div>
+                            </div>
+                            <button class="border-[0] p-[12px_16px] rounded-[10px] cursor-pointer font-[700] bg-transparent border-[2px] border-solid border-[#e6eef9] text-(--accent)">RSVP</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <aside class="bg-(--card) p-[18px] rounded-[12px] h-full flex flex-col gap-[12px]" aria-labelledby="progress-title">
+                <h4 id="progress-title" class="mb-[6px]">Learning streak</h4>
+                <div class="flex justify-between items-center gap-[12px]">
+                    <div>
+                        <div class="text-[13px] text-(--muted)">This week</div>
+                        <div class="font-[700]">4 days</div>
+                    </div>
+                    <div class="flex-1 h-[10px] bg-[#eef2ff] rounded-[8px] overflow-hidden">
+                    <div class="w-[56%] h-full bg-gradient-to-r from-[#7c3aed] to-[#06b6d4]"></div>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="mb-[6px] font-bold">Recommended topic</h4>
+                    <div class="font-[700]">APIs with Express</div>
+                    <p class="text-[13px] text-(--muted) mb-[8px]">A short path to build and deploy a REST API in under an
+                        hour.</p>
+                </div>
+
+                <div class="mt-auto">
+                    <h4 class="mb-[8px] font-bold">Account</h4>
+                    <div class="text-[13px] text-(--muted)">Email: student@example.com</div>
+                    <button class="mt-[10px] border-[0] p-[12px_16px] rounded-[10px] cursor-pointer font-[700] bg-transparent border-[2px] border-solid border-[#e6eef9] text-(--accent)">Manage plan</button>
+                </div>
+            </aside>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div>
+                <div class="font-bold font-[800]">StudyHub</div>
+                <div class="text-[13px] text-(--muted)">Learn together • Build faster</div>
+            </div>
+            <div class="flex gap-[12px] flex-wrap justify-end">
+                <a class="text-[13px] text-(--muted) underline" href="#">Terms</a>
+                <a class="text-[13px] text-(--muted) underline" href="#">Privacy</a>
+                <a class="text-[13px] text-(--muted) underline" href="#">Support</a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
