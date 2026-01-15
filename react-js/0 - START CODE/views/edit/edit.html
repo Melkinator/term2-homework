@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="../../css/style.css"/>
+    <script defer src="edit.js"></script>
+  </head>
+  <body>
+    <nav>
+    <ul>
+      <a href="../../index.html"><img src="https://media1.tenor.com/m/dofkOmsOZmwAAAAd/sliped-banana.gif" alt="logo"></a>
+      <h2>QUIZ APP</h2>
+    </ul>
+    <ul>
+      <li><a href="../play/play.html">Play Quiz</a></li>
+      <li><a href="edit.html">Edit Quiz</a></li>
+    </ul>
+    </nav>
+
+    <div id="questions-dialog" style="display: none">
+        <dialog open>
+            <header>Make new question</header>
+
+            <section>
+                <label>Title</label>
+                <input id="title" type="text" placeholder="Question title">
+
+                <label>Answers</label>
+                <input id="choiceA" type="text" placeholder="Answer A">
+                <input id="choiceB" type="text" placeholder="Answer B">
+                <input id="choiceC" type="text" placeholder="Answer C">
+                <input id="choiceD" type="text" placeholder="Answer D">
+            </section>
+
+            <menu>
+                <button     onclick="cancel()">Cancel</button>
+                <button id="createEditButton" onclick="create()">Create</button>
+            </menu>
+        </dialog>
+    </div>
+
+    <div id="questions-view">
+        <button onclick="addQuestion()">Add Question</button>
+
+        <div id="questions-container"></div>
+    </div>
+</body>
+</html>

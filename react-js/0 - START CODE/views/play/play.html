@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="../../css/style.css" />
+    <script defer src="play.js"></script>
+  </head>
+  <body>
+    <nav>
+    <ul>
+      <a href="../../index.html"><img src="https://media1.tenor.com/m/dofkOmsOZmwAAAAd/sliped-banana.gif"></a>
+      <h2>QUIZ APP</h2>
+    </ul>
+    <ul>
+      <li><a href="play.html">Play Quiz</a></li>
+      <li><a href="../edit/edit.html">Edit Quiz</a></li>
+    </ul>
+    </nav>
+    <div id="play-view">
+        <div id="start" style="display: none">Start Quiz!</div>
+
+        <div id="quiz">
+        <div id="question">QQQQQQQQ</div>
+
+        <div id="choices">
+            <div class="choice" id="A" onclick="checkAnswer('A')">AAAA</div>
+            <div class="choice" id="B" onclick="checkAnswer('B')">BBBB</div>
+            <div class="choice" id="C" onclick="checkAnswer('C')">CCCC</div>
+            <div class="choice" id="D" onclick="checkAnswer('D')">DD</div>
+        </div>
+
+        
+        </div>
+        <div id="score" style="display: none"></div>
+        <br>
+        <div style="display: flex"><img id="image" src=""></div>
+    </div>
+    
+  </body>
+</html>
