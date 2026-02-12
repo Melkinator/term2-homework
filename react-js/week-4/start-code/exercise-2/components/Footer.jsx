@@ -1,7 +1,9 @@
-function Footer() {
+function Footer () {
     return (
-        <footer class="block">
+        <footer className="block">
           <p>You can find the React doc at https://react.dev/</p>
         </footer>
     );
 }
+
+export default Footer;
