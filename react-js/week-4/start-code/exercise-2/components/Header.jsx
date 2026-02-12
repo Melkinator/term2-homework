@@ -1,9 +1,7 @@
-let title = "The amazing atomic clock"
-
 function Header() {
     return(
-        <header>
-            <h1>{title}</h1>
+        <header className="block">
+            <h2>Welcome to this course!</h2>
         </header>
     );
 }
