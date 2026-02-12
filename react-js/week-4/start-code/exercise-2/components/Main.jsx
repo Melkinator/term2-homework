@@ -1,23 +1,18 @@
-import Time from "./Time.jsx";
 function Main() {
   return (
-    <div>
-      <h2>The date now is:</h2>
-      <Time />
-
-      <h4>Did you know ?</h4>
-      <p>
-        The implementation of Greenwich Mean Time was the first step to
-        determine the time zone of other countries in regard to GMT+0, while the
-        concept of Coordinated Universal Time (UTC) was designed to provide a
-        more accurate timekeeping system. Nevertheless, both of these time
-        standards are widely used in the world for a similar purpose of time
-        coordination. The differences in the terminology of GMT and UTC still
-        create confusion in international cooperation. Even though UTC was
-        introduced as a more accurate time standard, the occurrence of the leap
-        seconds demonstrated the flaws for the universal time synchronisation.
-      </p>
-    </div>
+    <main className="block">
+        <p>
+          React (also known as React.js or ReactJS) is a free and open-source
+          front-end JavaScript library for building user interfaces based on
+          components. It is maintained by Meta (formerly Facebook) and a
+          community of individual developers and companies. React can be used to
+          develop single-page, mobile, or server-rendered applications with
+          frameworks like Next.js. Because React is only concerned with the user
+          interface and rendering components to the DOM, React applications
+          often rely on libraries for routing and other client-side
+          functionality.
+        </p>
+      </main>
   );
 }
 
